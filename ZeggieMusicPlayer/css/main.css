@@ -1,0 +1,176 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: radial-gradient(#E0D9C6, #2a4679);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#musicPlayer {
+  width: 90vw;
+  height: 90vh;
+  display: flex;
+  flex-flow: column;
+  justify-items: stretch;
+  align-items: flex-start;
+  color: white;
+  background: rgba(17, 17, 17, 0.294);
+}
+#musicPlayer .mediaContent {
+  flex: 9;
+  width: 100%;
+  height: 90%;
+  display: block;
+  overflow: hidden;
+}
+#musicPlayer .mediaContent .mainTopBar {
+  display: flex;
+  width: 100%;
+  height: 10vh;
+  background-color: rgba(42, 70, 121, 0.4);
+}
+#musicPlayer .mediaContent .mainTopBar .user {
+  width: 100%;
+  padding: 10px;
+  height: var(--lateral-bar-w);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+#musicPlayer .mediaContent .mainTopBar .user:hover, #musicPlayer .mediaContent .mainTopBar .hover {
+  background-color: rgba(242, 242, 242, 0.121);
+}
+#musicPlayer .mediaContent .mainTopBar .item {
+  width: 100%;
+  padding: 10px;
+  height: var(--lateral-bar-w);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+#musicPlayer .mediaContent .mainTopBar .item i {
+  font-size: 120%;
+}
+#musicPlayer .mediaContent .mainTopBar .item:hover, #musicPlayer .mediaContent .mainTopBar .hover {
+  background-color: #2a4679;
+}
+#musicPlayer .mediaContent .menu {
+  min-width: 220px;
+  width: 100%;
+  height: 220px;
+  margin-top: -220px;
+  background-color: #2d2d2d;
+  transition: all 0.3s ease;
+  display: block;
+}
+#musicPlayer .mediaContent .menu .title {
+  border-bottom: 0.5px solid white;
+  padding: 15px 20px 10px 20px;
+  background-color: rgba(175, 40, 22, 0.418);
+}
+#musicPlayer .mediaContent .menu .item {
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: rgba(216, 216, 216, 0.2);
+}
+#musicPlayer .mediaContent .menu .item:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+#musicPlayer .mediaContent .content {
+  display: flex;
+  width: 100%;
+  height: 88%;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-top: 1%;
+  overflow-y: auto;
+}
+#musicPlayer .mediaContent .content .item {
+  width: 200px;
+  height: 200px;
+  border: 1px solid black;
+  margin: 20px 10px;
+  cursor: pointer;
+}
+#musicPlayer .mediaContent .content .item.add {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 510%;
+  color: rgba(33, 34, 33, 0.1);
+}
+#musicPlayer #controls {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  background-color: rgba(175, 40, 22, 0.418);
+}
+#musicPlayer #controls .controlBar {
+  width: 100%;
+  display: flex;
+}
+#musicPlayer #controls .controlBar .buttons {
+  display: flex;
+  align-items: center;
+}
+#musicPlayer #controls .controlBar .buttons .button {
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#musicPlayer #controls .controlBar .buttons .button:hover {
+  background: rgba(175, 40, 22, 0.616);
+}
+#musicPlayer #controls .controlBar .volumeControl {
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+#musicPlayer #controls .controlBar .volumeControl:hover {
+  background: rgba(175, 40, 22, 0.616);
+}
+#musicPlayer #controls .controlBar .progressBar {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+#musicPlayer #controls .controlBar .progressBar .bar {
+  position: relative;
+  margin-top: -4px;
+  width: 0%;
+  height: 3px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  background: red;
+  cursor: pointer;
+}
+#musicPlayer #controls .controlBar .progressBar .barShadow {
+  width: 100%;
+  height: 3px;
+  background-color: rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+#musicPlayer #controls .controlBar .progressBar .data {
+  display: flex;
+  flex-flow: row;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 70%;
+  padding-top: 6px;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Zeggie's Music Player</title>
+    <link rel="stylesheet" href="css/fontawesome-free-5.7.2-web/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="src/models/MusicPlayer.js"></script>
+    <script src="src/app.js"></script>
+</head>
+<body>
+    <div id="musicPlayer">
+        <div class="mediaContent">
+            <div class="mainTopBar">
+                <div class="user">Usuario</div>
+                <div class="item" data-title="My Playlists">
+                    <i class="fas fa-list-ol"></i>
+                </div>
+                <div class="item" data-title="My Library">
+                    <i class="fas fa-headphones-alt"></i>
+                </div>
+                <div class="item" data-title="My Suscriptions">
+                    <i class="fas fa-users"></i>
+                </div>
+            </div>
+            <div class="menu">
+                <div class="title">My Playlist</div>
+            </div>
+            <div class="content">
+                <div id="addSong" class="item add">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+            </div>
+        </div>
+        <div id="controls">
+            <div class="controlBar">
+                <div class="buttons">
+                    <div class="button prevSong">
+                        <i class="fas fa-backward"></i>
+                    </div>
+                    <div id="play" class="button playPause">
+                        <i class="fas fa-play"></i>
+                    </div>
+                    <div class="button nextSong">
+                        <i class="fas fa-forward"></i>
+                    </div>                    
+                </div>
+                <div class="volumeControl">
+                    <i class="fas fa-volume-up"></i>
+                </div>
+                <div class="progressBar">
+                    <div class="barShadow"></div>
+                    <div class="bar"></div>
+                    <div class="data">
+                        <div class="current">00:00:00</div>
+                        <div class="total">00:00:00</div>
+                    </div>
+                </div>
+                <div class="songInfo">
+                    <div class="albumArt">
+                    </div>
+                    <span class="artist"></span>
+                    <span class="song"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

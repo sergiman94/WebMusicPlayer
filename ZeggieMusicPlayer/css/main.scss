@@ -1,0 +1,197 @@
+$dark : #503F45;
+$light : #E0D9C6;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    // background: #9c9c9c;
+    background: radial-gradient(#E0D9C6, rgb(42, 70, 121));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#musicPlayer{
+    width: 90vw;
+    height: 90vh;
+    // border: 2px solid white;
+    display: flex;
+    flex-flow: column;
+    justify-items: stretch;
+    align-items: flex-start;
+    color: white;
+    background: rgba(17, 17, 17, 0.294);
+    .mediaContent{
+        flex: 9;
+        width: 100%;
+        height: 90%;
+        display: block;
+        overflow: hidden;
+        .mainTopBar{
+            display: flex;
+            width: 100%;
+            height: 10vh;
+            background-color: rgba(42, 70, 121,0.4);
+            // border: 2px solid red;
+            .user{
+                width: 100%;
+                padding: 10px;
+                height: var(--lateral-bar-w);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+                cursor: pointer;
+            }
+            .user:hover, .hover{
+                background-color: rgba($color: rgb(242, 242, 242), $alpha: 0.121);
+            }
+            .item{
+                width: 100%;
+                padding: 10px;
+                height: var(--lateral-bar-w);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.3s ease;
+                cursor: pointer;
+                i{
+                    font-size: 120%;
+                }
+            }
+            .item:hover, .hover{
+                background-color: rgb(42, 70, 121);
+            }
+        }
+        .menu{
+            min-width: 220px;
+            width: 100%;
+            height: 220px;
+            // min-height: 200px;
+            margin-top: -220px;
+            background-color: #2d2d2d;
+            transition: all 0.3s ease;
+            //overflow-x: auto;
+            display: block;
+            .title{
+                border-bottom: 0.5px solid white;
+                padding: 15px 20px 10px 20px;
+                background-color:  rgba(175, 40, 22, 0.418);
+            }
+            .item{
+                padding: 10px 20px;
+                cursor: pointer;
+                background-color: rgba($color: #D8D8D8, $alpha: 0.2);
+            }
+            .item:hover{
+                background: rgba(0,0,0,0.2);
+            }
+        }
+        .content{
+            display: flex;
+            width: 100%;
+            height: 88%;
+            flex-flow: row wrap;
+            justify-content: flex-start;
+            margin-top: 1%;
+            overflow-y: auto;
+            // border: 2px solid green;
+            .item{
+                width: 200px;
+                height: 200px;
+                border: 1px solid black;
+                margin: 20px 10px;
+                cursor: pointer;
+            }
+            .item.add{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 510%;
+                color: rgba($color: #212221, $alpha: 0.1);
+            }
+        }
+    }
+    #controls{
+        flex: 1;
+        width: 100%;
+        display: flex;
+        // border: 2px solid blue;
+        background-color: rgba(175, 40, 22, 0.418);
+        .controlBar{
+            width: 100%;
+            display: flex;
+            .buttons{
+                display: flex;
+                align-items: center;
+                .button{
+                    padding: 10px;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                }
+                .button:hover{
+                    background: rgba(175, 40, 22, 0.616); 
+                }
+            }
+
+            .volumeControl{
+               
+                margin-left: 10px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            .volumeControl:hover{
+                background: rgba(175, 40, 22, 0.616); 
+            }
+
+            .progressBar{
+                
+                width: 100%;
+                padding: 0 20px;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                .bar{
+                    position: relative;
+                    margin-top: -4px;
+                    width: 0%;
+                    height: 3px;
+                    border-bottom: 1px solid rgba(255,255,255,0.4);
+                    background: red;
+                    cursor: pointer;
+                }
+                .barShadow{
+                    width: 100%;
+                    height: 3px;
+                    background-color: rgba(0,0,0,0.2);
+                    cursor: pointer;
+                }
+                .data{
+                    display: flex;
+                    flex-flow: row;
+                    width: 100%;
+                    justify-content: space-between;
+                    font-size: 70%;
+                    padding-top: 6px;
+                }
+            }
+
+            .artist{
+
+            }
+            .song{
+                
+            }
+        }
+    }
+}
+
