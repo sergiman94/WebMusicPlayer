@@ -12,13 +12,20 @@ class MusicPlayer{
 			this.player.currentTime = this.player.duration * p;
         }
         
-        this.playBtn = document.querySelector("#play");
-		this.playBtn.onclick = () => { this.play() };
+    this.playBtn = document.querySelector("#play");
+		this.playBtn.onclick = () => { this.play(artistName, songName) };
 
 		this.player.ontimeupdate = () => { this.updateData() };
     }
 
-    play() {
+    play(artistName, songName) {
+
+			let artist = document.querySelector(".artist");
+			artist.innerHTML = artistName;
+
+			let song = document.querySelector(".song");
+			song.innerHTML = songName;
+
 		let icon = this.playBtn.querySelector("i");
 		if(this.player.paused){
 			icon.classList.remove("fa-play");
@@ -29,6 +36,7 @@ class MusicPlayer{
 			icon.classList.add("fa-play");
             this.player.pause();
 		}
+		
 	}
 
 	updateData(){

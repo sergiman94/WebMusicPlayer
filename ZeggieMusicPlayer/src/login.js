@@ -52,8 +52,6 @@ function doLogin(e){
 
 function doSignUp(e){
 	e.preventDefault();
-
-	console.log("asdlkasldjasjl");
 	
 	let fetch = postRequest("#signUpForm",`${servidor}signup`);
 

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Song Upload</title>
+</head>
+
+<body>
+    <form id="addSongForm" onsubmit="addSong(event)">
+        <input name="title" type="text" class="input" placeholder="Title" />
+        <input name="duration" type="text" class="input" placeholder="Duration" />
+        <input name="format" type="text" class="input" placeholder="Format" />
+        <input name="file" type="text" class="input" placeholder="File" />
+        <input name="data" type="file" class="input">
+        <!-- <input type="submit" value="Upload File" name="add"> -->
+        <button type = "submit" class="submit-btn">Add</button>
+    </form>
+    <!-- <audio id="sound" controls></audio> -->
+
+    <script src="src/upload.js"></script>
+</body>
+
+</html>

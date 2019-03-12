@@ -41,7 +41,6 @@ function login(){
 }
 
 function select(){
-    
     global $db,$table;
 
     $where = (isset($_GET["username"])) ? "username = '$_GET[username]'" : "";
